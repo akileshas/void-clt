@@ -7,7 +7,7 @@
     margin: 0 auto;
     width: 85%;
     max-width: 1200px;
-    z-index: 100;
+    z-index: 9999;
     border-radius: 40px;
     background: rgba(19, 19, 19, 0.4);
     backdrop-filter: blur(20px) saturate(200%);
@@ -17,7 +17,9 @@
         0 4px 30px rgba(0, 0, 0, 0.3),
         0 0 15px rgba(0, 219, 233, 0.1),
         inset 0 0 20px rgba(0, 219, 233, 0.05);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .liquid-navbar:hover {

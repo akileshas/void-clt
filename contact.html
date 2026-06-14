@@ -8,170 +8,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="assets/css/responsive.css" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "on-primary": "#00363a",
-            "on-tertiary-fixed": "#380038",
-            "tertiary-fixed-dim": "#ffabf3",
-            "on-secondary-fixed-variant": "#75009e",
-            "inverse-primary": "#006970",
-            "secondary": "#ecb1ff",
-            "on-background": "#e2e2e2",
-            "on-error-container": "#ffdad6",
-            "on-tertiary-container": "#a900a9",
-            "inverse-on-surface": "#303030",
-            "error": "#ffb4ab",
-            "on-primary-container": "#006970",
-            "surface-container": "#1f1f1f",
-            "surface-container-highest": "#353535",
-            "error-container": "#93000a",
-            "secondary-container": "#d05bff",
-            "primary-container": "#00f0ff",
-            "surface-bright": "#393939",
-            "surface-container-lowest": "#0e0e0e",
-            "on-surface-variant": "#b9cacb",
-            "tertiary-fixed": "#ffd7f5",
-            "tertiary": "#fff3f9",
-            "primary-fixed": "#7df4ff",
-            "on-secondary": "#520070",
-            "on-error": "#690005",
-            "outline": "#849495",
-            "surface-dim": "#131313",
-            "on-primary-fixed-variant": "#004f54",
-            "inverse-surface": "#e2e2e2",
-            "tertiary-container": "#ffc9f4",
-            "surface-container-low": "#1b1b1b",
-            "background": "#131313",
-            "surface-variant": "#353535",
-            "on-secondary-container": "#480063",
-            "surface-tint": "#00dbe9",
-            "outline-variant": "#3b494b",
-            "primary": "#dbfcff",
-            "on-tertiary-fixed-variant": "#810081",
-            "secondary-fixed-dim": "#ecb1ff",
-            "primary-fixed-dim": "#00dbe9",
-            "on-secondary-fixed": "#320046",
-            "on-primary-fixed": "#002022",
-            "surface-container-high": "#2a2a2a",
-            "surface": "#131313",
-            "on-tertiary": "#5b005b",
-            "on-surface": "#e2e2e2",
-            "secondary-fixed": "#f9d8ff"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.25rem",
-            "lg": "0.5rem",
-            "xl": "0.75rem",
-            "full": "9999px"
-          },
-          "spacing": {
-            "margin-mobile": "16px",
-            "grid-columns": "12",
-            "margin-desktop": "64px",
-            "gutter": "24px",
-            "base": "8px"
-          },
-          "fontFamily": {
-            "body-md": ["JetBrains Mono"],
-            "label-caps": ["Space Mono"],
-            "headline-lg": ["Space Grotesk"],
-            "headline-lg-mobile": ["Space Grotesk"],
-            "display-lg": ["Space Grotesk"],
-            "body-lg": ["JetBrains Mono"],
-            "headline-xl": ["Space Grotesk"]
-          },
-          "fontSize": {
-            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-            "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "700"}],
-            "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
-            "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
-            "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
-            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-            "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
-          }
-        },
-      },
-    }
-  </script>
-<style>
-        body {
-            background-color: #000000;
-            background-image: 
-                linear-gradient(rgba(0, 219, 233, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 219, 233, 0.03) 1px, transparent 1px);
-            background-size: 32px 32px;
-            color: #e2e2e2;
-        }
-        .scanline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 999;
-            opacity: 0.15;
-        }
-        .glow-cyan { text-shadow: 0 0 10px rgba(0, 219, 233, 0.6); }
-        .glow-magenta { text-shadow: 0 0 10px rgba(208, 91, 255, 0.6); }
-        .glitch-border { position: relative; }
-        .glitch-border::after {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(90deg, transparent, #00dbe9, transparent, #d05bff, transparent);
-            z-index: -1;
-            opacity: 0.3;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .terminal-cursor {
-            display: inline-block;
-            width: 8px;
-            height: 1.2em;
-            background-color: #00dbe9;
-            vertical-align: middle;
-            margin-left: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #00dbe9; }
-    </style>
+<script src="assets/js/tailwind-config.js"></script>
+<link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/navbar.css" rel="stylesheet"/>
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen font-body-md overflow-x-hidden">
 <div class="scanline"></div>
 <!-- TopNavBar -->
-<header class="liquid-navbar">
-<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop h-20 flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full border border-primary/40 bg-surface-container-lowest flex items-center justify-center shadow-[0_0_10px_rgba(0,219,233,0.2)]">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">hive</span>
-</div>
-<span class="font-display-lg text-headline-lg font-black text-primary dark:text-primary-fixed-dim uppercase italic">Into the Void 2.0</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="event.html">Event</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="fee.html">Registration</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sponsors.html">Sponser</a>
-<a class="text-primary border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_#00dbe9] font-label-caps text-label-caps" href="contact.html">Contect</a>
-</nav>
-<div class="flex items-center">
-<div class="w-10 h-10 rounded-full border border-secondary/40 bg-secondary/10 flex items-center justify-center overflow-hidden shadow-[0_0_10px_rgba(208,91,255,0.2)]">
-<span class="material-symbols-outlined text-secondary text-xl">person</span>
-</div>
-</div>
-</div>
-</header>
+<!-- TopNavBar Placeholder -->
+<div id="navbar-placeholder"></div>
 <!-- SideNavBar Shell (Suppressed as this is a focused Task/Contact Page) -->
-<main class="pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
+<main class="pt-24  pb-16 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Transmit Packet Form (Left Section) -->
 <section class="md:col-span-7 flex flex-col gap-8">
@@ -179,24 +26,23 @@
 <span class="font-label-caps text-label-caps tracking-[0.3em] uppercase" style="color:#d05bff;">Communication Node: 0x7F</span>
 <h1 class="font-display-lg text-headline-xl md:text-display-lg tracking-tighter italic" style="color:#00dbe9; text-shadow: 0 0 20px rgba(0,219,233,0.4);">TRANSMIT_PACKET</h1>
 </div>
-<div class="gaming-panel p-8 rounded-none relative z-10">
+<div class="glass-panel p-8 relative z-10 rounded-2xl">
 <div class="absolute top-4 right-4 text-[10px] font-mono text-secondary/40">STATUS: NOMINAL // PKT_READY</div>
 <form class="flex flex-col gap-10">
-<div class="group relative">
-<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2" style="color:rgba(0,219,233,0.6);">Operator_ID</label>
-<input class="gaming-input w-full text-primary-fixed-dim outline-none font-body-lg placeholder:text-surface-variant" placeholder="OP_XXXX_ALPHA" type="text"/>
+<div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
+<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Operator_ID</label>
+<input class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="OP_XXXX_ALPHA" type="text"/>
 </div>
-<div class="group relative">
-<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2" style="color:rgba(0,219,233,0.6);">Subject_Vector</label>
-<input class="gaming-input w-full text-primary-fixed-dim outline-none font-body-lg placeholder:text-surface-variant" placeholder="CRITICAL_SYSTEM_RECOVERY" type="text"/>
+<div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
+<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Subject_Vector</label>
+<input class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="CRITICAL_SYSTEM_RECOVERY" type="text"/>
 </div>
-<div class="group relative">
-<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2" style="color:rgba(0,219,233,0.6);">Payload_Data</label>
-<textarea class="gaming-input w-full text-primary-fixed-dim outline-none font-body-md placeholder:text-surface-variant resize-none" placeholder="Enter encrypted transmission data..." rows="5"></textarea>
+<div class="group relative border border-primary/30 rounded-xl focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors bg-black/40 overflow-hidden">
+<label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Payload_Data</label>
+<textarea class="w-full bg-transparent text-primary outline-none font-body-md placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3 resize-none" placeholder="Enter encrypted transmission data..." rows="5"></textarea>
 </div>
-<button class="gaming-btn self-start group relative text-on-primary-container px-10 py-4 font-bold tracking-widest uppercase" type="submit">
-<span class="relative z-10">EXECUTE TRANSMISSION</span>
-<span class="material-symbols-outlined absolute right-[-20px] top-1/2 -translate-y-1/2 opacity-0 group-hover:right-4 group-hover:opacity-100 transition-all">send</span>
+<button class="bg-primary-container text-on-primary-container rounded-xl shadow-[0_0_20px_rgba(0,219,233,0.4)] self-start group relative px-10 py-4 font-bold tracking-widest uppercase hover:bg-white transition-all transform active:scale-95" type="submit">
+<span class="relative z-10 flex items-center gap-2">EXECUTE TRANSMISSION <span class="material-symbols-outlined text-sm">send</span></span>
 </button>
 </form>
 </div>
@@ -204,7 +50,7 @@
 <!-- Support & Uplink Panel (Right Section) -->
 <aside class="md:col-span-5 flex flex-col gap-gutter">
 <!-- Synth Core Alpha AI -->
-<div class="gaming-panel p-6 rounded-none relative z-10">
+<div class="glass-panel p-6 relative z-10 border-t-2 border-secondary rounded-2xl">
 <div class="flex items-center gap-4 mb-6">
 <div class="w-12 h-12 flex items-center justify-center" style="background:rgba(208,91,255,0.1);border:1px solid #d05bff;box-shadow:0 0 10px rgba(208,91,255,0.4);">
 <span class="material-symbols-outlined" style="color:#d05bff;font-variation-settings: 'FILL' 1;">neurology</span>
@@ -224,7 +70,7 @@
 </div>
 </div>
 <!-- Global Uplink Status -->
-<div class="gaming-panel p-6 rounded-none flex flex-col gap-4 z-10">
+<div class="glass-panel p-6 flex flex-col gap-4 z-10 border-t-2 border-primary rounded-2xl">
 <div class="flex justify-between items-center border-b border-primary/10 pb-2">
 <span class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-tighter">GLOBAL_UPLINK</span>
 <span class="flex items-center gap-2 text-[10px] font-mono text-primary">
@@ -310,4 +156,5 @@
 </footer>
 <script src="assets/js/footer-links.js"></script>
 <script src="assets/js/smooth-scroll.js"></script>
+<script src="assets/js/navbar.js"></script>
 </body></html>

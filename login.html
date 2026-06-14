@@ -44,7 +44,7 @@
 <!-- TopNavBar Placeholder -->
 <div id="navbar-placeholder"></div>
 <!-- Main Content: Login Portal -->
-<main class="flex-grow flex items-center justify-center pt-24 px-margin-mobile relative">
+<main class="pt-24 flex-grow flex items-center justify-center  px-margin-mobile relative">
 <div class="login-scanline"></div>
 <!-- Background Decorative Elements -->
 <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -63,7 +63,7 @@
 </div>
 </div>
 <!-- Centralized Auth Box -->
-<div class="bg-surface-container-lowest/80 backdrop-blur-2xl border border-primary/30 p-8 md:p-12 relative overflow-hidden">
+<div class="bg-surface-container-lowest/80 backdrop-blur-2xl border border-primary/30 rounded-2xl p-8 md:p-12 relative overflow-hidden">
 <!-- Inner Decorative Accents -->
 <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-secondary/40"></div>
 <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/40"></div>
@@ -81,25 +81,25 @@
             <label class="block text-label-caps font-label-caps text-on-surface-variant mb-2 text-[10px] tracking-widest uppercase" for="login_identity">
                 Username / Email
             </label>
-            <div class="relative border-b border-outline/30 focus-within:border-primary-fixed-dim transition-all">
-                <input class="w-full bg-transparent border-none py-3 px-0 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="login_identity" placeholder="ENTER_IDENTITY" type="text" required/>
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">person</span>
+            <div class="relative border border-outline/30 rounded-xl bg-black/40 focus-within:border-primary-fixed-dim focus-within:ring-1 focus-within:ring-primary-fixed-dim transition-all overflow-hidden">
+                <input class="w-full bg-transparent border-none py-4 px-4 pr-12 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="login_identity" placeholder="ENTER_IDENTITY" type="text" required/>
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">person</span>
             </div>
         </div>
         <div class="group relative">
             <label class="block text-label-caps font-label-caps text-on-surface-variant mb-2 text-[10px] tracking-widest uppercase" for="login_password">
                 Password
             </label>
-            <div class="relative border-b border-outline/30 focus-within:border-secondary transition-all">
-                <input class="w-full bg-transparent border-none py-3 px-0 font-body-md text-secondary placeholder:text-surface-variant focus:ring-0 outline-none" id="login_password" placeholder="••••••••••••" type="password" required/>
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">lock</span>
+            <div class="relative border border-outline/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all overflow-hidden">
+                <input class="w-full bg-transparent border-none py-4 px-4 pr-12 font-body-md text-secondary placeholder:text-surface-variant focus:ring-0 outline-none" id="login_password" placeholder="••••••••••••" type="password" required/>
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">lock</span>
             </div>
             <div class="flex justify-end mt-3">
                 <a class="text-[10px] font-label-caps text-on-surface-variant hover:text-secondary transition-colors underline decoration-secondary/30 underline-offset-4" href="#">Forgot Password?</a>
             </div>
         </div>
         <div class="pt-4">
-            <button class="w-full py-4 bg-primary-container text-on-primary-container font-headline-lg text-lg uppercase font-black italic tracking-widest hover:bg-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(0,219,233,0.4)]" type="submit">
+            <button class="w-full py-4 bg-primary-container rounded-xl text-on-primary-container font-headline-lg text-lg uppercase font-bold tracking-widest hover:bg-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(0,219,233,0.4)]" type="submit">
                 LOGIN
             </button>
         </div>
@@ -111,31 +111,31 @@
             <label class="block text-label-caps font-label-caps text-on-surface-variant mb-2 text-[10px] tracking-widest uppercase" for="reg_username">
                 Username
             </label>
-            <div class="relative border-b border-outline/30 focus-within:border-primary-fixed-dim transition-all">
-                <input class="w-full bg-transparent border-none py-3 px-0 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_username" placeholder="CHOOSE_IDENTITY" type="text" required/>
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">badge</span>
+            <div class="relative border border-outline/30 rounded-xl bg-black/40 focus-within:border-primary-fixed-dim focus-within:ring-1 focus-within:ring-primary-fixed-dim transition-all overflow-hidden">
+                <input class="w-full bg-transparent border-none py-4 px-4 pr-12 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_username" placeholder="CHOOSE_IDENTITY" type="text" required/>
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">badge</span>
             </div>
         </div>
         <div class="group relative">
             <label class="block text-label-caps font-label-caps text-on-surface-variant mb-2 text-[10px] tracking-widest uppercase" for="reg_email">
                 Email Address
             </label>
-            <div class="relative border-b border-outline/30 focus-within:border-primary-fixed-dim transition-all">
-                <input class="w-full bg-transparent border-none py-3 px-0 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_email" placeholder="ENTER_EMAIL" type="email" required/>
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">mail</span>
+            <div class="relative border border-outline/30 rounded-xl bg-black/40 focus-within:border-primary-fixed-dim focus-within:ring-1 focus-within:ring-primary-fixed-dim transition-all overflow-hidden">
+                <input class="w-full bg-transparent border-none py-4 px-4 pr-12 font-body-md text-primary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_email" placeholder="ENTER_EMAIL" type="email" required/>
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">mail</span>
             </div>
         </div>
         <div class="group relative">
             <label class="block text-label-caps font-label-caps text-on-surface-variant mb-2 text-[10px] tracking-widest uppercase" for="reg_password">
                 Password
             </label>
-            <div class="relative border-b border-outline/30 focus-within:border-secondary transition-all">
-                <input class="w-full bg-transparent border-none py-3 px-0 font-body-md text-secondary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_password" placeholder="••••••••••••" type="password" required/>
-                <span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">lock</span>
+            <div class="relative border border-outline/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-all overflow-hidden">
+                <input class="w-full bg-transparent border-none py-4 px-4 pr-12 font-body-md text-secondary placeholder:text-surface-variant focus:ring-0 outline-none" id="reg_password" placeholder="••••••••••••" type="password" required/>
+                <span class="absolute right-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline/40 text-sm">lock</span>
             </div>
         </div>
         <div class="pt-4">
-            <button class="w-full py-4 bg-primary-container text-on-primary-container font-headline-lg text-lg uppercase font-black italic tracking-widest hover:bg-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(0,219,233,0.4)]" type="submit">
+            <button class="w-full py-4 bg-primary-container rounded-xl text-on-primary-container font-headline-lg text-lg uppercase font-bold tracking-widest hover:bg-white transition-all transform active:scale-95 shadow-[0_0_20px_rgba(0,219,233,0.4)]" type="submit">
                 REGISTER
             </button>
         </div>
