@@ -218,116 +218,34 @@
         </section>
 
 
-        <section id="registration" class="pt-16 pb-24 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
-            <div class="relative z-10 w-full mt-10">
-
-
-                <!-- Gaming Panel Container -->
-                <div class="relative p-[2px] gaming-clip group">
-                    <!-- Animated RGB Border Background -->
-                    <div
-                        class="absolute inset-0 z-[-1] bg-gradient-to-r from-[#00dbe9] via-[#d05bff] to-[#00dbe9] bg-[length:200%_200%] animate-[rgb-border_3s_ease_infinite] opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-                    </div>
-
-                    <!-- Inner Black Panel -->
-                    <div class="bg-black/90 backdrop-blur-xl p-10 gaming-clip relative z-10 h-full">
-                        <form class="grid grid-cols-1 md:grid-cols-2 gap-8 relative text-white">
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Name</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-primary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-primary focus:bg-primary/10 transition-all outline-none"
-                                    placeholder="Enter your full name" required type="text" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Email
-                                    ID</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-secondary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-secondary focus:bg-secondary/10 transition-all outline-none"
-                                    placeholder="user@domain.com" required type="email" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Mobile
-                                    Number</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-primary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-primary focus:bg-primary/10 transition-all outline-none"
-                                    placeholder="+91 9876543210" required type="tel" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">College
-                                    Name</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-secondary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-secondary focus:bg-secondary/10 transition-all outline-none"
-                                    placeholder="Name of Institution" required type="text" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Degree</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-primary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-primary focus:bg-primary/10 transition-all outline-none"
-                                    placeholder="E.g., B.Tech, B.E, B.Sc" required type="text" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Department</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-secondary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-secondary focus:bg-secondary/10 transition-all outline-none"
-                                    placeholder="E.g., Computer Science, IT" required type="text" />
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Year
-                                    of Study</label>
-                                <div class="relative">
-                                    <select
-                                        class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-primary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-primary focus:bg-primary/10 transition-all outline-none appearance-none"
-                                        required>
-                                        <option value="" class="bg-black text-white">Select Year</option>
-                                        <option value="1" class="bg-black text-white">1st Year</option>
-                                        <option value="2" class="bg-black text-white">2nd Year</option>
-                                        <option value="3" class="bg-black text-white">3rd Year</option>
-                                        <option value="4" class="bg-black text-white">4th Year</option>
-                                    </select>
-                                    <span
-                                        class="material-symbols-outlined absolute right-4 top-4 pointer-events-none text-primary/50">expand_more</span>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col gap-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-secondary uppercase tracking-widest">Location</label>
-                                <input
-                                    class="gaming-input-clip w-full bg-surface-container-lowest/50 border border-secondary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-secondary focus:bg-secondary/10 transition-all outline-none"
-                                    placeholder="City / District" required type="text" />
-                            </div>
-
-                            <div class="flex flex-col gap-2 md:col-span-2">
-                                <label
-                                    class="font-label-caps text-[10px] text-primary uppercase tracking-widest">Pincode</label>
-                                <input
-                                    class="gaming-input-clip w-full md:w-1/2 bg-surface-container-lowest/50 border border-primary/30 p-4 font-body-md text-white placeholder:text-white/20 focus:border-primary focus:bg-primary/10 transition-all outline-none"
-                                    placeholder="Postal Code" required type="text" />
-                            </div>
-
-                            <div class="md:col-span-2 mt-12 flex justify-center">
-                                <button type="submit"
-                                    class="relative px-16 py-6 bg-primary/20 text-primary font-label-caps font-bold text-lg uppercase tracking-[0.2em] hover:bg-primary hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(0,219,233,0.3)] hover:shadow-[0_0_40px_rgba(0,219,233,0.8)] gaming-clip border border-primary">
-                                    INITIALIZE_UPLINK
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+        <section id="registration" class="pt-16 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+    <div class="flex items-center gap-4 mb-16 px-4">
+        <span class="material-symbols-outlined text-primary">style</span>
+        <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+            CHOOSE_YOUR_CLASS</h3>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-10 mt-10">
+        <a href="ctf.html" alt="Mythrill" >
+            <div class="card">
+                <div class="wrapper">
+                    <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
                 </div>
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
             </div>
-        </section>
+        </a>
+
+        <a href="conference.html" alt="Mythrill" >
+            <div class="card">
+                <div class="wrapper">
+                    <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+                </div>
+                <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+                <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+            </div>
+        </a>
+    </div>
+</section>
 
         <!-- ── HYPER SCROLL: Embedded Inline 3D Section ── -->
         <!-- This container is TALL so scrolling drives the 3D camera. The viewport inside is sticky. -->
@@ -639,126 +557,6 @@
 
     </main>
 
-    <div id="contact" class="pt-16 pb-16 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-            <!-- Transmit Packet Form (Left Section) -->
-            <section class="md:col-span-7 flex flex-col gap-8">
-                <div class="flex flex-col gap-2">
-                    <span class="font-label-caps text-label-caps tracking-[0.3em] uppercase"
-                        style="color:#d05bff;">Communication Node: 0x7F</span>
-                    <h1 class="font-display-lg text-headline-xl md:text-display-lg tracking-tighter italic"
-                        style="color:#00dbe9; text-shadow: 0 0 20px rgba(0,219,233,0.4);">TRANSMIT_PACKET</h1>
-                </div>
-                <div class="gaming-panel p-8 rounded-none relative z-10">
-                    <div class="absolute top-4 right-4 text-[10px] font-mono text-secondary/40">STATUS: NOMINAL //
-                        PKT_READY</div>
-                    <form class="flex flex-col gap-10">
-                        <div class="group relative">
-                            <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2"
-                                style="color:rgba(0,219,233,0.6);">Operator_ID</label>
-                            <input
-                                class="gaming-input w-full text-primary-fixed-dim outline-none font-body-lg placeholder:text-surface-variant"
-                                placeholder="OP_XXXX_ALPHA" type="text" />
-                        </div>
-                        <div class="group relative">
-                            <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2"
-                                style="color:rgba(0,219,233,0.6);">Subject_Vector</label>
-                            <input
-                                class="gaming-input w-full text-primary-fixed-dim outline-none font-body-lg placeholder:text-surface-variant"
-                                placeholder="CRITICAL_SYSTEM_RECOVERY" type="text" />
-                        </div>
-                        <div class="group relative">
-                            <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2"
-                                style="color:rgba(0,219,233,0.6);">Payload_Data</label>
-                            <textarea
-                                class="gaming-input w-full text-primary-fixed-dim outline-none font-body-md placeholder:text-surface-variant resize-none"
-                                placeholder="Enter encrypted transmission data..." rows="5"></textarea>
-                        </div>
-                        <button
-                            class="gaming-btn self-start group relative text-on-primary-container px-10 py-4 font-bold tracking-widest uppercase"
-                            type="submit">
-                            <span class="relative z-10">EXECUTE TRANSMISSION</span>
-                            <span
-                                class="material-symbols-outlined absolute right-[-20px] top-1/2 -translate-y-1/2 opacity-0 group-hover:right-4 group-hover:opacity-100 transition-all">send</span>
-                        </button>
-                    </form>
-                </div>
-            </section>
-            <!-- Support & Uplink Panel (Right Section) -->
-            <aside class="md:col-span-5 flex flex-col gap-gutter">
-                <!-- Synth Core Alpha AI -->
-                <div class="gaming-panel p-6 rounded-none relative z-10">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 flex items-center justify-center"
-                            style="background:rgba(208,91,255,0.1);border:1px solid #d05bff;box-shadow:0 0 10px rgba(208,91,255,0.4);">
-                            <span class="material-symbols-outlined"
-                                style="color:#d05bff;font-variation-settings: 'FILL' 1;">neurology</span>
-                        </div>
-                        <div>
-                            <h3 class="font-label-caps text-label-caps" style="color:#d05bff;">Synth Core Alpha</h3>
-                            <p class="text-[10px] text-on-surface-variant/60 font-mono">NEURAL_INTERFACE_ACTIVE</p>
-                        </div>
-                    </div>
-                    <div class="bg-black/40 p-4 font-body-md text-sm mb-4"
-                        style="color:#00dbe9;border-left:2px solid rgba(208,91,255,0.5);">
-                        <span class="text-secondary/60">SYSTEM:</span> Welcome, Operator. How may I assist with your
-                        current session parameters?
-                        <span class="terminal-cursor"></span>
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button class="bg-surface-container-low py-2 text-[10px] font-label-caps transition-all"
-                            style="border:1px solid rgba(208,91,255,0.25);color:#d05bff;"
-                            onmouseover="this.style.background='rgba(208,91,255,0.1)';this.style.borderColor='#d05bff'"
-                            onmouseout="this.style.background='';this.style.borderColor='rgba(208,91,255,0.25)'">DECRYPT_LOGS</button>
-                        <button class="bg-surface-container-low py-2 text-[10px] font-label-caps transition-all"
-                            style="border:1px solid rgba(208,91,255,0.25);color:#d05bff;"
-                            onmouseover="this.style.background='rgba(208,91,255,0.1)';this.style.borderColor='#d05bff'"
-                            onmouseout="this.style.background='';this.style.borderColor='rgba(208,91,255,0.25)'">SYS_RECOVERY</button>
-                    </div>
-                </div>
-                <!-- Global Uplink Status -->
-                <div class="gaming-panel p-6 rounded-none flex flex-col gap-4 z-10">
-                    <div class="flex justify-between items-center border-b border-primary/10 pb-2">
-                        <span
-                            class="font-label-caps text-xs text-primary-fixed-dim uppercase tracking-tighter">GLOBAL_UPLINK</span>
-                        <span class="flex items-center gap-2 text-[10px] font-mono text-primary">
-                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#00f0ff]"></span>
-                            SYNCHRONIZED
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <div class="flex justify-between items-center text-[11px] font-mono">
-                            <span class="text-on-surface-variant/60">SIGNAL_STRENGTH</span>
-                            <span class="text-primary-fixed-dim">98.4%</span>
-                        </div>
-                        <div class="w-full bg-surface-container-highest h-1">
-                            <div class="bg-primary-fixed-dim h-full shadow-[0_0_5px_#00dbe9]" style="width: 98.4%">
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center text-[11px] font-mono mt-2">
-                            <span class="text-on-surface-variant/60">ENCRYPTION_LAYER</span>
-                            <span class="text-primary-fixed-dim">AES-4096-VOID</span>
-                        </div>
-                    </div>
-                    <img class="w-full h-40 object-cover mt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-700"
-                        data-alt="A highly detailed 3D holographic projection of a digital globe illuminated by vibrant cyan and magenta network lines. The sphere floats in a pitch-black digital space, with countless data streams and orbital shards circling the planet. High-contrast lighting highlights the crystalline texture of the earth's continents, set against a background of faint scanlines and chromatic aberration. The atmosphere is high-tech, futuristic, and immersive."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP_0SONeu6N0x-IfmQyVI3ZDNIlYfmZBNEr0shDNc0daiKfFc-UmtSF6uxqnScT0Q67PPQ1iUDyUENd9m7TJtpPJYU4sm-OYZU6yI26liQoX41DYdbY8PWhLYPxCO2vwJ-l2C0x309qvcNUXukn0-MEITSwZs7tXY1aJjrA-a-8kWlSkymG8Se85drnq_e-lgEbYxyEFCrdHXbHB2W1ZSMXIGVsLCCWA8EjJPkjUjkluziVuCavB28icDdOYjTTHYPn8clKzAN-EQ" />
-                </div>
-                <!-- Emergency Terminal -->
-                <div
-                    class="p-6 border-2 border-dashed border-error/30 flex items-center gap-4 bg-error/5 group hover:border-error transition-colors">
-                    <span class="material-symbols-outlined text-error text-4xl"
-                        style="font-variation-settings: 'FILL' 0;">warning</span>
-                    <div class="flex flex-col">
-                        <span class="font-label-caps text-error text-xs uppercase tracking-widest">EMERGENCY_HALT</span>
-                        <span class="text-[10px] text-on-surface-variant">Instant session termination &amp; core
-                            scrub.</span>
-                    </div>
-                </div>
-            </aside>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="w-full bg-black/95 border-t border-primary/20 py-10">
         <div
@@ -817,7 +615,7 @@
             <div>© 2124 MULTIVERSE_CORE. ALL RIGHTS RESERVED. [RESTRICTED ACCESS]</div>
             <div class="flex flex-wrap items-center justify-center gap-6">
                 <a class="hover:text-primary transition-all" href="terms.html">PROTOCOL_TC</a>
-                <a class="hover:text-primary transition-all" href="contact.html">CONTACT_NODE</a>
+                
                 <a class="hover:text-primary transition-all" href="privacy.html">PRIVACY_ENCRYPT</a>
                 <a class="hover:text-primary transition-all" href="sitemap.html">SITEMAP_DIR</a>
             </div>

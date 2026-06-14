@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#registration">Registration</a>
                                 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#hyper-inline">Category</a>
                                 <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#sponsors">Sponser</a>
-                                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="#contact">Contect</a>
                             </nav>
                             <div class="flex items-center">
                                 <div class="w-10 h-10 rounded-full border border-secondary/40 bg-secondary/10 flex items-center justify-center overflow-hidden shadow-[0_0_10px_rgba(208,91,255,0.2)]">
