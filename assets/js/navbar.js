@@ -81,3 +81,20 @@ function initNavbar() {
         }
     });
 }
+
+// Hide navbar on scroll down
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const navbar = document.querySelector(".liquid-navbar");
+    if (navbar) {
+        if (currentScroll > lastScrollTop && currentScroll > 50) {
+            // Scroll Down
+            navbar.classList.add("nav-hidden");
+        } else {
+            // Scroll Up
+            navbar.classList.remove("nav-hidden");
+        }
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}, false);

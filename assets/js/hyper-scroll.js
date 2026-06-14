@@ -1,7 +1,8 @@
 (function () {
     const ITEM_COUNT = 20, STAR_COUNT = 160, Z_GAP = 800;
     const LOOP_SIZE = ITEM_COUNT * Z_GAP, CAM_SPEED = 2.2;
-    const TEXTS = ["WEB", "FORENSICS", "CRYPTO", "PWN", "REVERSE", "OSINT", "MISC", "CLOUD", "HARDWARE", "MOBILE"];
+    const TEXTS =["WEB", "FORENSICS","BINARY","ML", "MISC", "CRYPTO", "REVERSE", "OSINT", "NETWORK", "kernal"];
+;
 
     let mouseX = 0, mouseY = 0, vel = 0, targetVel = 0;
     const world = document.getElementById('hi-world');

@@ -5,8 +5,8 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 85%;
-    max-width: 1200px;
+    width: fit-content;
+    max-width: 95%;
     z-index: 9999;
     border-radius: 40px;
     background: rgba(19, 19, 19, 0.4);
@@ -17,9 +17,14 @@
         0 4px 30px rgba(0, 0, 0, 0.3),
         0 0 15px rgba(0, 219, 233, 0.1),
         inset 0 0 20px rgba(0, 219, 233, 0.05);
-    transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
-    transform: translateZ(0);
+    transition: background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease, transform 0.4s ease, opacity 0.4s ease;
+    transform: translateY(0);
     will-change: transform;
+}
+
+.liquid-navbar.nav-hidden {
+    transform: translateY(-150%);
+    opacity: 0;
 }
 
 .liquid-navbar:hover {
