@@ -1,3 +1,20 @@
+// Force scroll to top on page reload
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+});
+
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    // Remove hash from URL if present to prevent auto-scrolling
+    if (window.location.hash) {
+        window.history.replaceState('', document.title, window.location.pathname + window.location.search);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     let isScrolling = false;
 

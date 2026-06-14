@@ -176,62 +176,6 @@ canvas {
 }
 
 
-/* Liquid Crystal Navbar */
-.liquid-navbar {
-    position: fixed;
-    top: 16px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 99%;
-    max-width: 1800px;
-    z-index: 100;
-    border-radius: 40px;
-    background: rgba(19, 19, 19, 0.4);
-    backdrop-filter: blur(20px) saturate(200%);
-    -webkit-backdrop-filter: blur(20px) saturate(200%);
-    border: 1px solid rgba(0, 219, 233, 0.2);
-    box-shadow: 
-        0 4px 30px rgba(0, 0, 0, 0.3),
-        0 0 15px rgba(0, 219, 233, 0.1),
-        inset 0 0 20px rgba(0, 219, 233, 0.05);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.liquid-navbar:hover {
-    background: rgba(19, 19, 19, 0.6);
-    backdrop-filter: blur(28px) saturate(250%);
-    -webkit-backdrop-filter: blur(28px) saturate(250%);
-    border: 1px solid rgba(0, 219, 233, 0.5);
-    box-shadow: 
-        0 8px 40px rgba(0, 0, 0, 0.4),
-        0 0 25px rgba(0, 219, 233, 0.3),
-        inset 0 0 30px rgba(0, 219, 233, 0.1);
-}
-
-/* Navigation links and hover effects */
-.liquid-navbar nav a {
-    font-size: 16px !important;
-    letter-spacing: 0.1em !important;
-    padding: 8px 20px !important;
-    border-radius: 25px !important;
-    transition: all 0.6s ease !important;
-    border: 2px solid transparent !important;
-}
-
-.liquid-navbar nav a:hover {
-    color: rgb(38,47,54) !important;
-    background-color: white !important;
-    border-radius: 25px !important;
-}
-
-.liquid-navbar nav a.active {
-    color: white !important;
-    font-weight: bold !important;
-    border: 2px solid white !important;
-    background-color: transparent !important;
-    border-radius: 25px !important;
-}
 
 /* Enhanced Holographic Timer Styles */
 .timer-block {
@@ -244,8 +188,8 @@ canvas {
     align-items: center;
     border-radius: 50%;
     background: radial-gradient(circle at center, rgba(19, 19, 19, 0.9) 0%, rgba(5, 5, 5, 1) 100%);
-    box-shadow: inset 0 0 20px rgba(0, 219, 233, 0.2), 0 5px 15px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(0, 219, 233, 0.3);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2), 0 5px 15px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
@@ -259,20 +203,12 @@ canvas {
 
 .timer-block:hover {
     transform: scale(1.1) translateY(-10px);
-    box-shadow: inset 0 0 30px rgba(0, 219, 233, 0.5), 0 15px 30px rgba(0, 219, 233, 0.2);
-    border-color: rgba(0, 219, 233, 0.8);
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.5), 0 15px 30px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
     z-index: 10;
 }
 
-.timer-block.secondary-theme:hover {
-    box-shadow: inset 0 0 30px rgba(208, 91, 255, 0.5), 0 15px 30px rgba(208, 91, 255, 0.2);
-    border-color: rgba(208, 91, 255, 0.8);
-}
 
-.timer-block.error-theme:hover {
-    box-shadow: inset 0 0 30px rgba(255, 180, 171, 0.5), 0 15px 30px rgba(255, 180, 171, 0.2);
-    border-color: rgba(255, 180, 171, 0.8);
-}
 
 .timer-block::before {
     content: '';
@@ -281,19 +217,12 @@ canvas {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: conic-gradient(transparent, rgba(0, 219, 233, 0.3), transparent 40%);
+    background: conic-gradient(transparent, rgba(255, 255, 255, 0.3), transparent 40%);
     animation: rotate 4s linear infinite;
     z-index: 0;
 }
 
-.timer-block.secondary-theme::before {
-    background: conic-gradient(transparent, rgba(208, 91, 255, 0.3), transparent 40%);
-}
 
-.timer-block.error-theme::before {
-    background: conic-gradient(transparent, rgba(255, 180, 171, 0.3), transparent 40%);
-    animation: rotate 2s linear infinite reverse;
-}
 
 .timer-block-inner {
     position: relative;
@@ -435,9 +364,3 @@ canvas {
     position: relative;
     z-index: 1;
 }
-/* ── Background ── */
-
-
-
-
-
