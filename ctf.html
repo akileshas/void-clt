@@ -11,6 +11,7 @@
 <script src="assets/js/tailwind-config.js"></script>
 <link href="assets/css/main.css" rel="stylesheet"/>
 <link href="assets/css/navbar.css" rel="stylesheet"/>
+<script src="assets/js/register.js"></script> 
 </head>
 <body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen font-body-md overflow-x-hidden">
 <div class="scanline"></div>
@@ -19,73 +20,283 @@
 <div id="navbar-placeholder"></div>
 <!-- SideNavBar Shell (Suppressed as this is a focused Task/Contact Page) -->
 <main class="pt-32  pb-32 mb-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
-<div class="max-w-4xl mx-auto">
-    <div class="flex flex-col gap-2 mb-8 text-center">
-        <span class="font-label-caps text-label-caps tracking-[0.3em] uppercase" style="color:#d05bff;">Registration Node: 0x1A_CTF</span>
-        <h1 class="font-display-lg text-headline-xl tracking-tighter italic" style="color:#00dbe9; text-shadow: 0 0 20px rgba(0,219,233,0.4);">CTF_REGISTRATION</h1>
+<div class="max-w-6xl mx-auto">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2 mb-12 text-center">
+        <span class="font-label-caps text-label-caps tracking-[0.3em] uppercase text-secondary">
+            Registration Node: 0x1A_CTF
+        </span>
+
+        <h1 class="font-display-lg text-headline-xl tracking-tighter italic"
+            style="color:#00dbe9; text-shadow:0 0 20px rgba(0,219,233,.4);">
+            CTF_REGISTRATION
+        </h1>
     </div>
-    <div class="glass-panel p-8 relative z-10 rounded-2xl border-t-2 border-primary">
-        <div class="absolute top-4 right-4 text-[10px] font-mono text-secondary/40">STATUS: UPLINK_READY</div>
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Full_Name</label>
-                <input class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="Enter your full name" required type="text"/>
-            </div>
-             <div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Gender</label>
-                <select class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3 appearance-none" required>
-                    <option value="1" class="bg-black text-white">Male</option>
-                    <option value="2" class="bg-black text-white">Female</option>
-                    <option value="3" class="bg-black text-white">Other</option>
-                </select>
-                
-            </div>
-            <div class="group relative border border-secondary/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(208,91,255,0.6);">Email_ID</label>
-                <input class="w-full bg-transparent text-secondary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="user@domain.com" required type="email"/>
-            </div>
-            <div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Mobile_Number</label>
-                <input class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="+91 9876543210" required type="tel"/>
-            </div>
-            <div class="group relative border border-secondary/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(208,91,255,0.6);">College_Name</label>
-                <select class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3 appearance-none" required>
-                    <option value="" class="bg-black text-white">Chennai Institute of Technology</option>
-                    <option value="" class="bg-black text-white">SRM Institute of Science and Technology</option>
-                  
-                </select> </div>
-            <div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Degree</label>
-                <input class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="E.g., B.Tech, B.E, B.Sc" required type="text"/>
-            </div>
-            <div class="group relative border border-secondary/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(208,91,255,0.6);">Department</label>
-                <input class="w-full bg-transparent text-secondary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="E.g., Computer Science, IT" required type="text"/>
-            </div>
-            <div class="group relative border border-primary/30 rounded-xl bg-black/40 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(0,219,233,0.6);">Year_of_Study</label>
-                <select class="w-full bg-transparent text-primary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3 appearance-none" required>
-                    <option value="" class="bg-black text-white">Select Year</option>
-                    <option value="1" class="bg-black text-white">1st Year</option>
-                    <option value="2" class="bg-black text-white">2nd Year</option>
-                    <option value="3" class="bg-black text-white">3rd Year</option>
-                    <option value="4" class="bg-black text-white">4th Year</option>
-                </select>
-                
-            </div>
-            <div class="group relative border border-secondary/30 rounded-xl bg-black/40 focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary transition-colors overflow-hidden">
-                <label class="font-label-caps text-[10px] uppercase tracking-widest block mb-2 px-4 pt-3" style="color:rgba(208,91,255,0.6);">Location</label>
-                <input class="w-full bg-transparent text-secondary outline-none font-body-lg placeholder:text-surface-variant border-none focus:ring-0 px-4 pb-3" placeholder="City / District" required type="text"/>
-            </div>
-            <div class="md:col-span-2 mt-8 flex justify-center">
-                <button class="bg-primary-container text-on-primary-container rounded-xl shadow-[0_0_20px_rgba(0,219,233,0.4)] group relative px-16 py-4 font-bold tracking-widest uppercase hover:bg-white transition-all transform active:scale-95" type="submit">
-                    <span class="relative z-10 flex items-center gap-2">INITIALIZE_UPLINK <span class="material-symbols-outlined text-sm">send</span></span>
+
+    <!-- Glass Panel -->
+    <div class="glass-panel relative rounded-2xl border-t-2 border-primary p-10">
+
+        <!-- Status -->
+        <div class="absolute top-6 right-8 text-[10px] font-mono tracking-widest text-secondary/40">
+            STATUS: UPLINK_READY
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex justify-center mb-16">
+
+            <div class="tab-container">
+
+                <button
+                    id="soloTab"
+                    type="button"
+                    class="tab-btn active-tab"
+                    onclick="switchTab('solo')">
+                    SOLO
                 </button>
+
+                <button
+                    id="teamTab"
+                    type="button"
+                    class="tab-btn"
+                    onclick="switchTab('team')">
+                    TEAM
+                </button>
+
             </div>
-        </form>
+
+        </div>
+
+        <!-- SOLO FORM -->
+        <div id="soloForm">
+
+            <form class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div class="md:col-span-2 group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Team_Name
+                    </label>
+                    <input type="text"
+                           placeholder="Enter Team Name"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+                <!-- Full Name -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Full_Name
+                    </label>
+                    <input type="text"
+                           placeholder="Enter your full name"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <!-- Gender -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Gender
+                    </label>
+                    <select class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                        <option class="bg-black">Male</option>
+                        <option class="bg-black">Female</option>
+                        <option class="bg-black">Other</option>
+                    </select>
+                </div>
+
+                <!-- Email -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Email_ID
+                    </label>
+                    <input type="email"
+                           placeholder="user@domain.com"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+
+                <!-- Mobile -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Mobile_Number
+                    </label>
+                    <input type="tel"
+                           placeholder="+91 9876543210"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <!-- College -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        College_Name
+                    </label>
+                    <select class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                        <option class="bg-black">Chennai Institute of Technology</option>
+                        <option class="bg-black">SRM Institute of Science and Technology</option>
+                    </select>
+                </div>
+
+                <!-- Degree -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Degree
+                    </label>
+                    <input type="text"
+                           placeholder="B.Tech, B.E, B.Sc"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <!-- Department -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Department
+                    </label>
+                    <input type="text"
+                           placeholder="Computer Science, IT"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+
+                <!-- Year -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Year_of_Study
+                    </label>
+                    <select class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                        <option class="bg-black">Select Year</option>
+                        <option class="bg-black">1st Year</option>
+                        <option class="bg-black">2nd Year</option>
+                        <option class="bg-black">3rd Year</option>
+                        <option class="bg-black">4th Year</option>
+                    </select>
+                </div>
+
+                <!-- Location -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden md:col-span-2">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Location
+                    </label>
+                    <input type="text"
+                           placeholder="City / District"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+
+                <!-- Submit -->
+                <div class="md:col-span-2 flex justify-center pt-8">
+                    <button
+                        type="submit"
+                        class="px-16 py-4 rounded-xl bg-primary-container text-on-primary-container uppercase tracking-[0.25em] font-bold shadow-[0_0_30px_rgba(0,219,233,.4)]">
+                        INITIALIZE_UPLINK
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- TEAM FORM -->
+        <div id="teamForm" class="hidden">
+
+            <form class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="md:col-span-2 group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Team_Name
+                    </label>
+                    <input type="text"
+                           placeholder="Enter Team Name"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Team_Leader
+                    </label>
+                    <input type="text"
+                           placeholder="Leader Name"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Leader_Email
+                    </label>
+                    <input type="email"
+                           placeholder="leader@domain.com"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+                 <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden md:col-span-2">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Location
+                    </label>
+                    <input type="text"
+                           placeholder="City / District"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+                 <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Year_of_Study
+                    </label>
+                    <select class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                        <option class="bg-black">Select Year</option>
+                        <option class="bg-black">1st Year</option>
+                        <option class="bg-black">2nd Year</option>
+                        <option class="bg-black">3rd Year</option>
+                        <option class="bg-black">4th Year</option>
+                    </select>
+                </div>
+                <!-- Mobile -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Mobile_Number
+                    </label>
+                    <input type="tel"
+                           placeholder="+91 9876543210"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <!-- College -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        College_Name
+                    </label>
+                    <select class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                        <option class="bg-black">Chennai Institute of Technology</option>
+                        <option class="bg-black">SRM Institute of Science and Technology</option>
+                    </select>
+                </div>
+
+                <!-- Degree -->
+                <div class="group relative border border-primary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-cyan-400/70">
+                        Degree
+                    </label>
+                    <input type="text"
+                           placeholder="B.Tech, B.E, B.Sc"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-primary">
+                </div>
+
+                <!-- Department -->
+                <div class="group relative border border-secondary/30 rounded-xl bg-black/40 overflow-hidden">
+                    <label class="block px-4 pt-3 mb-2 text-[10px] uppercase tracking-widest text-purple-400/70">
+                        Department
+                    </label>
+                    <input type="text"
+                           placeholder="Computer Science, IT"
+                           class="w-full bg-transparent border-none focus:ring-0 px-4 pb-4 text-secondary">
+                </div>
+
+                <div class="md:col-span-2 flex justify-center pt-8">
+                    <button
+                        type="submit"
+                        class="px-16 py-4 rounded-xl bg-primary-container text-on-primary-container uppercase tracking-[0.25em] font-bold shadow-[0_0_30px_rgba(0,219,233,.4)]">
+                        REGISTER_TEAM
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
+
 </div>
+
 </main>
 <footer class="w-full bg-black/95 border-t border-primary/20 py-10">
 <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row items-center justify-between gap-8">
