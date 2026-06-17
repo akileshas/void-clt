@@ -12,21 +12,25 @@
         body {
             background-color: #000000;
             background-image: 
-                radial-gradient(circle at 50% 50%, rgba(0, 219, 233, 0.05) 0%, transparent 50%),
-                repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 2px);
-            background-size: 100% 100%, 100% 4px;
+                linear-gradient(rgba(0, 219, 233, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 219, 233, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: #e2e2e2;
         }
-        .scanline-overlay {
+        .scanline {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
-            background-size: 100% 2px, 3px 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+            background-size: 100% 4px;
             pointer-events: none;
-            z-index: 1000;
+            z-index: 999;
+            opacity: 0.15;
         }
+        .glow-cyan { text-shadow: 0 0 10px rgba(0, 219, 233, 0.6); }
+        .glow-magenta { text-shadow: 0 0 10px rgba(208, 91, 255, 0.6); }
         .glitch-border {
             position: relative;
         }
@@ -49,6 +53,9 @@
             vertical-align: middle;
             margin-left: 4px;
         }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #00dbe9; }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -140,10 +147,10 @@
         }
     </script>
 </head>
-<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-<div class="scanline-overlay"></div>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<div class="scanline"></div>
 <!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-[100] bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-primary/30 shadow-[0_0_15px_rgba(0,219,233,0.3)]">
+<header class="liquid-navbar">
 <div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop h-20 flex items-center justify-between">
 <div class="flex items-center gap-3">
 <div class="w-10 h-10 rounded-full border border-primary/40 bg-surface-container-lowest flex items-center justify-center shadow-[0_0_10px_rgba(0,219,233,0.2)]">
@@ -156,7 +163,7 @@
 <a class="text-primary border-b-2 border-primary-container pb-1 drop-shadow-[0_0_8px_#00dbe9] font-label-caps text-label-caps" href="event.html">Event</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="fee.html">Registration</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="sponsors.html">Sponser</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-caps text-label-caps" href="contact.html">Contect</a>
+
 </nav>
 <div class="flex items-center">
 <div class="w-10 h-10 rounded-full border border-secondary/40 bg-secondary/10 flex items-center justify-center overflow-hidden shadow-[0_0_10px_rgba(208,91,255,0.2)]">
@@ -166,59 +173,11 @@
 </div>
 </header>
 <!-- Main Canvas - Now Full Width -->
-<main class="pt-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
-<!-- Hero Section: Tracks -->
-<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
-<div class="md:col-span-12 mb-8">
-<h1 class="font-display-lg text-display-lg text-primary tracking-tighter uppercase italic leading-none">Temporal <br/>Protocol <span class="text-secondary">2124</span></h1>
-<p class="font-body-md text-on-surface-variant mt-4 max-w-2xl">Accessing fragmented timeline data. Select a synchronization track to begin neural tethering. System stability is currently <span class="text-primary">NOMINAL</span>.</p>
-</div>
-<!-- Track 1: Multiverse Breach -->
-<div class="md:col-span-6 group relative overflow-hidden bg-surface-container-low border border-primary/30 p-8 hover:border-primary transition-all backdrop-blur-md">
-<div class="absolute top-4 right-4 text-[10px] font-label-caps text-primary/40">DATA_NODE: BREACH_01</div>
-<div class="mb-6 flex items-center justify-between">
-<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">leak_add</span>
-<span class="bg-primary/10 text-primary px-3 py-1 text-[10px] font-label-caps border border-primary/20">PRIORITY: HIGH</span>
-</div>
-<h2 class="font-headline-xl text-headline-xl text-primary mb-4 leading-tight">Multiverse <br/>Breach</h2>
-<p class="font-body-md text-on-surface-variant mb-6">Quantum-level exploration into parallel architectural frameworks. Real-time reality distortion testing and cross-chain packet injection.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="px-2 py-1 bg-surface-container text-primary text-[10px] font-label-caps">#QUANTUM_DEV</span>
-<span class="px-2 py-1 bg-surface-container text-primary text-[10px] font-label-caps">#VOID_SYNC</span>
-<span class="px-2 py-1 bg-surface-container text-primary text-[10px] font-label-caps">#BREACH_JS</span>
-</div>
-<button class="w-full py-4 bg-primary text-on-primary font-label-caps hover:bg-secondary hover:text-on-secondary transition-all flex items-center justify-center gap-2">
-                INITIALIZE TRACK <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-<!-- Track 2: Neural Syndicate -->
-<div class="md:col-span-6 group relative overflow-hidden bg-surface-container-low border border-secondary/30 p-8 hover:border-secondary transition-all backdrop-blur-md">
-<div class="absolute top-4 right-4 text-[10px] font-label-caps text-secondary/40">DATA_NODE: SYNDICATE_X</div>
-<div class="mb-6 flex items-center justify-between">
-<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">neurology</span>
-<span class="bg-secondary/10 text-secondary px-3 py-1 text-[10px] font-label-caps border border-secondary/20">SECURITY: CRITICAL</span>
-</div>
-<h2 class="font-headline-xl text-headline-xl text-secondary mb-4 leading-tight">Neural <br/>Syndicate</h2>
-<p class="font-body-md text-on-surface-variant mb-6">Deep-dive into bio-synthetic interface protocols. Advanced wetware-to-silicon compilation and collective consciousness hacking.</p>
-<div class="flex flex-wrap gap-2 mb-8">
-<span class="px-2 py-1 bg-surface-container text-secondary text-[10px] font-label-caps">#BIO_LINK</span>
-<span class="px-2 py-1 bg-surface-container text-secondary text-[10px] font-label-caps">#NEURAL_OS</span>
-<span class="px-2 py-1 bg-surface-container text-secondary text-[10px] font-label-caps">#MIND_MESH</span>
-</div>
-<button class="w-full py-4 bg-secondary text-on-secondary font-label-caps hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-2">
-                INITIALIZE TRACK <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</section>
+<main class="pt-24  px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
+
 <!-- Main Content: Temporal Log -->
 <section class="mb-16">
-<div class="flex items-center justify-between mb-12 border-b border-primary/20 pb-4">
-<div class="flex items-center gap-4">
-<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight uppercase">Temporal Log</h2>
-<div class="h-2 w-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#00dbe9]"></div>
-</div>
-<div class="font-label-caps text-label-caps text-on-surface-variant">UTC+0 // SYNC_ACTIVE</div>
-</div>
+
 <div class="relative">
 <!-- Vertical Timeline Line -->
 <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary/10 -translate-x-1/2 hidden md:block"></div>
@@ -344,7 +303,7 @@
 <div>© 2124 MULTIVERSE_CORE. ALL RIGHTS RESERVED. [RESTRICTED ACCESS]</div>
 <div class="flex flex-wrap items-center justify-center gap-6">
 <a class="hover:text-primary transition-all" href="terms.html">PROTOCOL_TC</a>
-<a class="hover:text-primary transition-all" href="contact.html">CONTACT_NODE</a>
+
 <a class="hover:text-primary transition-all" href="privacy.html">PRIVACY_ENCRYPT</a>
 <a class="hover:text-primary transition-all" href="sitemap.html">SITEMAP_DIR</a>
 </div>
@@ -368,4 +327,5 @@
     }
 </style>
 <script src="assets/js/footer-links.js"></script>
+<script src="assets/js/smooth-scroll.js"></script>
 </body></html>
