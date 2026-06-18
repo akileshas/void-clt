@@ -30,9 +30,9 @@
         <section id="home"
             class="relative min-h-[calc(100vh-80px)] flex flex-col items-center justify-center overflow-hidden py-12 px-margin-mobile md:px-margin-desktop ">
             <div class="absolute inset-0 z-0 overflow-hidden">
-                <iframe src="particle.html" class="w-full h-full border-none pointer-events-auto"
+                <iframe src="particle.html" class="w-full h-full border-none pointer-events-auto hidden md:block"
                     style="transform: translateY(-9px);"></iframe>
-                <div id="multiverse-scene">
+                <div id="multiverse-scene" class="hidden md:block">
                     <img src="assets/images/castle.png" class="realm castle">
                     <img src="assets/images/orageworld.png" class="realm orange">
                     <img src="assets/images/cybercity.png" class="realm cyber">
@@ -53,7 +53,11 @@
 
             <!-- Enhanced Holographic Countdown Timer -->
             <div
-                class="absolute top-[75vh] left-0 w-full flex flex-wrap justify-center gap-6 md:gap-8 px-4 z-20 -translate-y-1/2">
+                class="absolute top-[65vh] md:top-[75vh] left-0 w-full flex flex-wrap justify-center gap-6 md:gap-8 px-4 z-20 -translate-y-1/2">
+                <img src="assets/images/mobi.png"
+                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-8 w-[85vw] max-w-[450px] h-auto z-10 md:hidden pointer-events-none"
+                    alt="" />
+
 
                 <!-- Days -->
                 <div class="timer-block group">
@@ -161,7 +165,8 @@
             </dev>
         </section>
         <!-- Main Content: Temporal Log -->
-        <section id="event" class="min-h-screen flex flex-col justify-center mb-16 pt-16 mt-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+        <section id="event"
+            class="min-h-screen flex flex-col justify-center mb-16 pt-16 mt-20 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
 
             <div class="relative">
                 <!-- Vertical Timeline Line -->
@@ -244,28 +249,26 @@
         </section>
 
 
-        <section id="registration" class="min-h-screen flex flex-col justify-center pt-16 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+        <section id="registration"
+            class="min-h-screen flex flex-col justify-center pt-16 pb-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
             <div class="flex flex-wrap justify-center items-center gap-32">
                 <a href="ctf.html" alt="Mythrill">
                     <div class="card">
                         <div class="wrapper">
-                            <img src="assets/images/redpill.png"
-                                class="cover-image" />
+                            <img src="assets/images/redpill.png" class="cover-image" />
                         </div>
                         <img src="assets/images/ctfover.png" class="title" />
-                        <img src="assets/images/overl.png" style="top: 9%;"  class="character" />
+                        <img src="assets/images/overl.png" style="top: 9%;" class="character" />
                     </div>
                 </a>
 
                 <a href="comingsoon.html" alt="Mythrill">
                     <div class="card">
                         <div class="wrapper">
-                            <img src="assets/images/confre.png"
-                                class="cover-image" />
+                            <img src="assets/images/confre.png" class="cover-image" />
                         </div>
                         <img src="assets/images/conover.png" class="title" />
-                        <img src="assets/images/over3.png"
-                            class="character" />
+                        <img src="assets/images/over3.png" class="character" />
                     </div>
                 </a>
             </div>
@@ -327,7 +330,8 @@
             </div>
         </section>
 
-        <div id="sponsors" class="min-h-screen flex flex-col justify-center pt-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
+        <div id="sponsors"
+            class="min-h-screen flex flex-col justify-center pt-24 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full">
             <!-- Hero Section -->
             <!-- <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
                 <div class="md:col-span-12 mb-8">
