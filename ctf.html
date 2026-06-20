@@ -1420,10 +1420,36 @@
             }, 1000);
         }
 
-        function resendOtp(type) {
-            // Logic to call the backend to resend
-            console.log(`Resending OTP for ${type}`);
-            startResendTimer(type);
+        async function resendOtp(type) {
+            const isSolo = document.getElementById('soloTab').classList.contains('active-tab');
+            const teamName = isSolo ? document.getElementById('soloTeamName').value.trim() : document.getElementById('teamTeamName').value.trim();
+
+            const btn = document.getElementById(type + 'ResendBtn');
+            if (btn) btn.disabled = true;
+
+            try {
+                const response = await fetch(BACKEND_URL + '_/api/v1/pub/auth/resend-otp', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ team_name: teamName })
+                });
+
+                const data = await response.json().catch(() => ({ message: 'Invalid server response' }));
+
+                if (!response.ok) {
+                    throw new Error(data.message || `Server error: ${response.status}`);
+                }
+                console.log(`Resent OTP for ${type} in team ${teamName}`);
+                startResendTimer(type);
+            } catch (err) {
+                console.error("Resend OTP Error:", err);
+                const errorBanner = document.getElementById('otpError');
+                if (errorBanner) {
+                    errorBanner.classList.remove('hidden');
+                    errorBanner.innerText = `⚠ RESEND ERROR: ${err.message}`;
+                }
+                if (btn) btn.disabled = false;
+            }
         }
 
         async function submitRegistration(formType) {
@@ -1544,7 +1570,7 @@
             setTimeout(() => document.getElementById('otp0').focus(), 100);
         }
 
-        function verifyOtp() {
+        async function verifyOtp() {
             const isSolo = document.getElementById('soloTab').classList.contains('active-tab');
 
             // Collect OTP from 6 boxes
@@ -1559,8 +1585,9 @@
                 return;
             }
 
+            let motpValue = null;
             if (!isSolo) {
-                const motpValue = ['motp0', 'motp1', 'motp2', 'motp3', 'motp4', 'motp5']
+                motpValue = ['motp0', 'motp1', 'motp2', 'motp3', 'motp4', 'motp5']
                     .map(id => document.getElementById(id).value)
                     .join('');
 
@@ -1573,6 +1600,50 @@
             }
             
             document.getElementById('otpError').classList.add('hidden');
+
+            const teamName = isSolo ? document.getElementById('soloTeamName').value.trim() : document.getElementById('teamTeamName').value.trim();
+            const leaderEmail = isSolo ? document.getElementById('soloEmail').value.trim() : document.getElementById('teamLeaderEmail').value.trim();
+            const memberEmail = isSolo ? null : document.getElementById('teamMemberEmail').value.trim();
+
+            const verifyBtn = document.querySelector('button[onclick="verifyOtp()"]');
+            const originalBtnText = verifyBtn.innerHTML;
+            verifyBtn.disabled = true;
+            verifyBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">refresh</span><span>VERIFYING...</span>';
+
+            try {
+                const payload = {
+                    team_leader: {
+                        email: leaderEmail,
+                        otp: otpValue
+                    },
+                    team_member: isSolo ? null : {
+                        email: memberEmail,
+                        otp: motpValue
+                    },
+                    team_name: teamName
+                };
+
+                const response = await fetch(BACKEND_URL + '_/api/v1/pub/auth/verify-otp', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const data = await response.json().catch(() => ({ message: 'Invalid server response' }));
+
+                if (!response.ok) {
+                    throw new Error(data.message || `Verification failed: ${response.status}`);
+                }
+            } catch (err) {
+                document.getElementById('otpError').classList.remove('hidden');
+                document.getElementById('otpError').innerText = `⚠ ${err.message}`;
+                verifyBtn.disabled = false;
+                verifyBtn.innerHTML = originalBtnText;
+                return;
+            }
+
+            verifyBtn.disabled = false;
+            verifyBtn.innerHTML = originalBtnText;
 
             // --- Fetch registrant name ---
             let registrantName = "—";
